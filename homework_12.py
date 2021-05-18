@@ -1,7 +1,7 @@
 # homework1
 
 import random
-class Dict:
+class SrtDict:
 
     def __init__(self, name):
         self.name = name
@@ -16,16 +16,15 @@ class Dict:
         return set(self.dict.values())
 
     def three_highest_values(self):
-        sort(self.dict.values())
-        return list(self.dict.values())[-3:] 
+        return sorted(list(self.dict.values()), reverse=True)[-3:] 
         
             
 
-dict_1 = Dict('python')
+dict_1 = SrtDict('python')
 
-print(dict_1.present)
-print(dict_1.no_doublicate_values)
-print(dict_1.three_highest_values)
+print(dict_1.present())
+print(dict_1.no_doublicate_values())
+print(dict_1.three_highest_values())
 
 
 
