@@ -3,7 +3,10 @@ import os
 
 print(os.getcwd())
 
-with open()
+with open("sample_json.json", "r") as json_file:
+    print(json_file)
+    data = json.load(json_file)
+    print(F"data is \n{data} \n{type(data)}")
 
 
 class Actor:
