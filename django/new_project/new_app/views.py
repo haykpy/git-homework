@@ -13,10 +13,6 @@ def date(request):
     return HttpResponse(F"Current date/time is {datetime.now()}")
 
 def print_dict(request):
-    return HttpResponse({i: i*i for i in range(1,16)})
-    # new_dict = {}
-    # for i in range(1,16):
-    #     new_dict[i]= i*i
-    # return HttpResponse(new_dict)
+    return HttpResponse(str({i: i*i for i in range(1,16)}))
 
 
