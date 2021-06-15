@@ -1,0 +1,104 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>Welcome to our page {{name}} {{surname}}</h3>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'new_app/style.css' %}">
+    <style>
+
+        .container{
+            color: blue;
+        }
+        .p-class{
+            color: blue;
+        }
+        #p-id{
+            background-color: bisque;
+        }
+        #first-div{
+        }
+<!--    </style>-->
+    <title>Hello</title>
+</head>
+<body>
+<!--    <h1>heading 1</h1>-->
+<!--    <h2>heading 2</h2>-->
+<!--    <h3>heading 3</h3>-->
+<!--    <h4>heading 4</h4>-->
+<!--    <h5>heading 5</h5>-->
+<!--    <h6>heading 6</h6>-->
+    <a href="https://www.google.com/imghp?sbi=1">google</a>
+    <a href="http://127.0.0.1:8000/new_app/hello-html"><h3>push it</h3></a>
+<!--    <a href="">a</a>-->
+<!--    <a href="">a</a>-->
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam aperiam nam beatae laudantium omnis! Veniam atque quas vitae molestiae, rem ex, eius expedita dolorum corrupti, assumenda possimus voluptatem! Mollitia, aut.</p>
+    <img src="https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg" alt="HTML 5" width="500px" height="300px">
+    <form method="post" action="">
+        {%csrf_token%}
+        <label for="fname">First name:</label>
+        <input type="text" placeholder="first name" id="fname" name="fname"><br><br>
+        <label for="lname">Last name:</label>
+        <input type="text" placeholder="last name" id="lname" name="lname"><br><br>
+        <label for="password">Password:</label>
+        <input type="password" placeholder="password" id="password" name="password"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+<!--    <h3>{{a}}</h3>-->
+<!--    <div  class="container">-->
+<!--        <p class="p-class" style="color:blue">class p</p>-->
+<!--        <p class="p-class" style="background-color: bisque;">class p</p>-->
+<!--        <p class="p-class">class p</p>-->
+<!--        <p id="p-id">id p</p>-->
+<!--    </div>-->
+
+<!--     <header>
+        <h2>
+            My First Template
+        </h2>
+     </header>
+<!-- &ndash;&gt;-->
+    <main>
+        <center>
+            <h2>This is our accounts loading page</h2>
+            <div class="form-container">
+                <h2>Sign up</h2>
+                <form method="POST">
+                    {% csrf_token %}
+                    <label for="fname">First Name:</label>
+                    <input type="text" name="fname"><br><br>
+                    <label for="lname">Last Name:</label>
+                    <input type="text" name="lname"><br><br>
+                    <label for="password">Password:</label>
+                    <input type="password" name="password"><br><br>
+                    <input type="submit" value="SUBMIT">
+                </form>
+                <h5>If you have already one <a href="">sign in</a> </h5>
+            </div>
+        </center>
+
+    </main>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

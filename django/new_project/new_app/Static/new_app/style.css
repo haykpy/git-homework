@@ -1,0 +1,32 @@
+/* .p-class{
+    color: blue;
+}
+#p-id{
+    background-color: bisque;
+} */
+body{
+    margin: 0;
+}
+
+header{
+    width: 100%;
+    height: 90px;
+    background-color: darkslategrey; 
+}
+
+header h2{ 
+    color: white;
+    padding-top: 22px;
+    margin-top: 0;
+    padding-left: 36px;
+}
+
+.form-container{
+    background-color: darkslategrey;
+    width: 20%;
+    height: 20%;
+}
+
+.form-container h2, label, h5{
+    color: white;
+}
