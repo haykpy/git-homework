@@ -1,0 +1,51 @@
+{% extends 'to_do/base.html' %}
+
+{% block content %}
+
+
+<!--<div class="right-column">-->
+<!--	<div class="item-row">-->
+<!--		{% if user.is_authenticated %}-->
+<!--			<a class="btn btn-sm btn-info" href="{% url 'user_logout' %}">Sign Out</a>-->
+<!--			<a class="btn btn-sm btn-info" href="#">Hello {{ request.user }}</a>-->
+<!--		{% else %}-->
+<!--			<a class="btn btn-sm btn-info" href="{% url 'register' %}">Sign Up</a>-->
+<!--			<a class="btn btn-sm btn-info" href="{% url 'user_login' %}">Sign In</a>-->
+<!--		{% endif %}-->
+<!--	</div>-->
+<!--</div>-->
+
+
+	<div class="todo-list">
+
+		<h3>Tasks</h3>
+
+		{% for item in tasks %}
+
+		<div class="item-row">
+			<a class="btn btn-sm btn-info" href="{% url 'task_update' item.id %}">Update</a>
+			<a class="btn btn-sm btn-danger" href="{% url 'task_delete' item.id %}">Delete</a>
+
+			{% if item.status == 2 %}
+			<strike><a href="{% url 'task_retrieve' item.id %}">{{item.name}}</a></strike>
+			{% else %}
+			<a href="{% url 'task_retrieve' item.id %}">{{item.name}}</a>
+			{% endif%}
+
+		</div>
+		{% endfor %}
+
+		<div class="item-row">
+
+			<a class="btn btn-sm btn-info" href="{% url 'create' %}">Create</a>
+			{{ task }}
+
+		</div>
+
+
+	</div>
+
+{% endblock content %}
+
+
+

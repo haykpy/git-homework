@@ -1,0 +1,26 @@
+{% extends 'to_do/base.html' %}
+
+{% block content %}
+
+<center><h3>Retrieve Your Task</h3></center>
+
+<!--<div class="center-column">-->
+	<h3>Retrieve task</h3>
+
+	<form method='GET'>
+
+		<div class="item-row">
+
+		<h1>Task: {{ task.name}}</h1>
+		<h1>Description: {{ task.description}}</h1>
+		<h1>Status: {{ task.get_status_display }}</h1>
+		</div>
+
+		<div class="item-row">
+
+			<a class="btn btn-sm btn-info" href="{% url 'task_update' task.id %}">Update</a>
+			<a class="btn btn-sm btn-danger" href="{% url 'task_delete' task.id %}">Delete</a>
+
+		</div>
+
+{% endblock content %}

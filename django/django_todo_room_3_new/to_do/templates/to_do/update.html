@@ -1,0 +1,36 @@
+{% extends 'to_do/base.html' %}
+
+{% block content %}
+
+<center><h3>Update Task</h3></center>
+
+
+	<form method="POST">
+
+		<div class="item-row">
+            <h1>Update here</h1>
+
+                {% csrf_token %}
+            {{ form.name.label }}
+                <br>
+            {{ form.name }}
+                <br>
+            {{ form.description.label }}
+                <br>
+            {{ form.description }}
+                <br>
+            {{ form.status.label }}
+                <br>
+            {{ form.status }}
+
+		</div>
+
+        <div class="item-row">
+            <button class="btn btn-sm btn-success" type="submit"">Update</button>
+        </div>
+
+        </form>
+
+
+</div>
+{% endblock content %}

@@ -1,0 +1,44 @@
+{% extends 'to_do/base.html' %}
+
+{% block content %}
+
+<!--<div class="center-column">-->
+
+
+	<div class="todo-list">
+
+		<h3>Create task</h3>
+
+<form method="post">
+		<div class="item-row">
+            <h1>create here</h1>
+
+
+                {% csrf_token %}
+            {{ task_form.user.label }}
+            {{ task_form.user }}
+                <br>
+            {{ task_form.name }}
+                <br>
+            {{ task_form.description.label }}
+                <br>
+            {{ task_form.description }}
+                <br>
+            {{ task_form.status.label }}
+                <br>
+            {{ task_form.status }}
+
+
+
+		</div>
+
+        <div class="item-row">
+            <button class="btn btn-sm btn-success" type="submit">Create</button>
+        </div>
+
+        </form>
+	</div>
+{% endblock content %}
+
+
+
